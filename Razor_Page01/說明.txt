@@ -1,0 +1,63 @@
+說真的，.NET6簡化的已是非常簡單了
+應該說不是簡單，而是簡化了許多功能
+接下來.NET6我都已6來表述。
+
+在.NET5之前，有很多功能需要跳來跳去的
+從我個人C# MVC資料夾裡面的案例，就能看出他有多跳
+跳到對於新手，是很不友善的。
+
+到了6，一開始要上手還是很苦手的。
+因為他整體架構並沒有變化，
+但簡化掉了許多不常用的function
+例如: StartUp 與 Program合併
+
+你一樣可以從Rrogram.cs中設定，
+這部分是資深工程師在玩的，所以我尚未學習到，
+但經個人部屬IIS後的經驗感想是，用預設的部分已足夠了。
+
+
+6簡化到甚麼樣子呢? 你可以用C# form的模式做類比
+每個view都有一些textbox button
+然後要把view上面的這些輸入資料，經由button觸發後，
+傳送至後方計算。
+
+每個view基本上後方都會綁定一個class，
+每個class裡面有很多function, var
+而一個button會對應到一個handler function
+
+每個function()，都可以自由設定需要帶入的var
+還有return的結果。
+void 是一般function，IActionResult 是決定回傳甚麼行動
+IActionResult這個在RESTful api裡面，也是存在的。
+
+在6裡，html <form>標籤內只要指定好method="post"
+中間每個<input>(也就是C#form的textbox)都指定好 type="" name=""
+name就會成為OnPost()需要對應的帶入變數
+
+最後唯一一個button設定為type="Submit"
+就會把每個input的value傳送至後方OnPost()做使用。
+
+打個比方:
+<form method="post">
+    <input name="str1" type="text" value=""/>
+    <input name="str2" type="password" value=""/>
+    <button type="submit">登入</button>
+</form>
+<p>@Model.text01</p>
+<p>@Model.text02</p>
+
+對應到後方:
+public string text01 = "";
+public string text02 = "";
+
+public IActionResult OnPost(string str1, string str2)
+{
+    text01 = str1;
+    text02 = str2;
+    return Page();
+}
+
+以上結果就是
+str1跟str2輸入文字，submit後，就會post到該OnPost function內
+計算text01 = str1, test02 = str2,
+然後他會自動刷新，@Model.text01,@Model.text02就會顯示出結果了。
