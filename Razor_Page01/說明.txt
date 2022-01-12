@@ -15,6 +15,7 @@
 這部分是資深工程師在玩的，所以我尚未學習到，
 但經個人部屬IIS後的經驗感想是，用預設的部分已足夠了。
 
+教材: https://youtu.be/eru2emiqow0
 
 6簡化到甚麼樣子呢? 你可以用C# form的模式做類比
 每個view都有一些textbox button
