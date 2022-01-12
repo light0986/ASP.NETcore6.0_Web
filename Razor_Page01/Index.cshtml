@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@using PublicStatic
+@{
+    //我是第一頁
+    ViewData["Title"] = "Home page";
+}
+@functions{
+
+}
+
+<div id="login_container">
+    <form id="login_div" method="post">
+        <div>
+            <p>Account:</p>
+            <input name="accountName" type="text" value=""/>
+        </div>
+        <br />
+        <div>
+            <p>PassWord:</p>
+            <input name="password" type="password" value=""/>
+        </div>
+        <button type="submit">登入</button>
+        <br />
+    </form>
+</div>
+
