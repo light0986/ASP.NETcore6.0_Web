@@ -63,5 +63,10 @@ str1跟str2輸入文字，submit後，就會post到該OnPost function內
 計算text01 = str1, test02 = str2,
 然後他會自動刷新，@Model.text01,@Model.text02就會顯示出結果了。
 
+當然，你也可以跟我一樣，用public static來暫存紀錄
+甚麼cookie啦~ session啦! 就都不再需要了
+因為我嘗試過，當onpost後，chrome點開檢視原始碼
+會直接顯示錯誤，這根本太安全了，安全到對於新人摸索會有難度。
+
 這就是.net6 web應用程式，
 不用m，只用vc就可以的ASP.NET core mvc。
