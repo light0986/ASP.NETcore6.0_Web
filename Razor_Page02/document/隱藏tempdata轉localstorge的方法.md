@@ -39,7 +39,23 @@ Razor Page的特性是這樣，他在讀取cshtml的時候，先讀取C#語言�
 ![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148567435.jpg)
 
 登入的結果長這樣，你可以看到，我放上去了兩層if。第二層我習慣加的，預防萬一後續擴增用，重點就在第一層。
-只要還存在TempData，我就可以看到中間這塊Dialog。接下來，就是見證奇蹟的時刻。
+只要還存在TempData，我就可以看到中間這塊Dialog。接下來，就是見證奇蹟的時刻。右鍵，網頁原始碼。ㄟ!!!!!!
 
+![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148423119.jpg)
 
+見鬼了吧? dialog標籤呢?
+是的，因為TempData還有值，所以你看不到。
+但dialog依然運行了，在dialog onload時，我已經把tempdata轉成localstorge。
 
+![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148529600.jpg)
+
+並且你不點擊submit，進入這個可愛的OnPost()，然後刪光TempData，你的dialog會因為在最上層一直擋著，而什麼事情也不能做喔!
+所以當安下去，就會重新刷新頁面，Tempdata也刪掉轉成localstorge。
+
+![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148589145.jpg)
+
+![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148614625.jpg)
+
+![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148447857.jpg)
+
+你就會看到localstorge，已成為隱藏在你的Browser中的一個Token。然後就可以用iframe開始載入靜態網頁，設計，並使用Ajax功能囉~
