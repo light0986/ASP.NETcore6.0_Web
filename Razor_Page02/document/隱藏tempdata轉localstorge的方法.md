@@ -22,13 +22,14 @@ ASP.net core web應用程式有一個特性，button submit之後，
 
 ![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642150035658.jpg)
 
-關鍵著眼點在這裡:
-<p id="err_text">@TempData["err_text"]</p>
+關鍵著眼點在這裡:<p id="err_text">@TempData["err_text"]</p>
 他被放在button下方，但看不見。因為他現在根本不存在。
 TempData是以session的方式在做傳遞與暫存資訊的，
 因此當我輸入錯誤的帳號密碼，submit後
 資料會先被傳送到OnPost()
+
 ![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148500654.jpg)
 
 OnPost()會去訪問資料庫，最後回傳搜尋的結果。
+
 ![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148512789.jpg)
