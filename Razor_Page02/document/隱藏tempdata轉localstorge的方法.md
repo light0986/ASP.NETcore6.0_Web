@@ -51,7 +51,7 @@ Razor Page的特性是這樣，他在讀取cshtml的時候，先讀取C#語言�
 ![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148529600.jpg)
 
 並且你不點擊submit，進入這個可愛的OnPost()，然後刪光TempData，你的dialog會因為在最上層一直擋著，而什麼事情也不能做喔!
-所以當安下去，就會重新刷新頁面，Tempdata也刪掉轉成localstorge。
+所以當按下去，就會重新刷新頁面，Tempdata也刪掉早轉成localstorge了。
 
 ![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148589145.jpg)
 
