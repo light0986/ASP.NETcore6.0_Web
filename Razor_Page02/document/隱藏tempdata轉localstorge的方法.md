@@ -13,7 +13,23 @@ ASP.net core web應用程式有一個特性，button submit之後，
 可@Tempdata又會看到該js的內容，我認為這樣並不安全。
 
 所以我要變一個魔術，我轉出去了，但也藏起來了。
-讓客戶端發生了甚麼事都不知道，那就神奇的掩蓋掉痕跡了。
-
+讓客戶端發生了甚麼事都不知道，神奇的掩蓋掉痕跡。
+怎麼做呢? 請慢慢看下去。
 
 ![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148312773.jpg)
+
+這是我設計的登入畫面。
+很簡單，長這樣。
+
+![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642150035658.jpg)
+
+關鍵著眼點在這裡:
+<p id="err_text">@TempData["err_text"]</p>
+他被放在button下方，但看不見。因為他現在根本不存在。
+TempData是以session的方式在做傳遞與暫存資訊的，
+因此當我輸入錯誤的帳號密碼，submit後
+資料會先被傳送到OnPost()
+![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148500654.jpg)
+
+OnPost()會去訪問資料庫，最後回傳搜尋的結果。
+![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148512789.jpg)
