@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - qrcvm2_web</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/LoginPage.css" asp-append-version="true" />
+    <script type="text/javascript" src="~/js/toolbar.js" ></script>
+    <script src="~/js.js" asp-append-version="true"></script>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 100px;
+        }
+ 
+        ::-webkit-scrollbar-thumb {
+            background-color: #4CAF50;
+            border-radius: 100px;
+        }
+    </style>
+
+    <script>
+        function page_start(){
+            localStorage.setItem("Account","");
+            localStorage.setItem("Keycode","");
+            localStorage.setItem("Username","");
+            localStorage.setItem("Permission","");
+        }
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</head>
+<body id="login_body" onload="page_start()">
+    <!-- 以上toolbar相關 -->
+    @RenderBody()
+</body>
+</html>
