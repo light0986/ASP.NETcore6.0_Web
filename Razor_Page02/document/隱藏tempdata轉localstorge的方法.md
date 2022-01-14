@@ -26,6 +26,8 @@ OnPost()會去訪問資料庫，最後回傳搜尋的結果。
 button下方，出現了TempData["err_text"]的值，叫做"登入錯誤"
 這時候你可以右鍵，檢視網頁原始碼，你會看到什麼?
 
+![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148327736.jpg)
+
 ![image](https://github.com/light0986/ASP.NETcore6.0_Web/blob/main/Razor_Page02/document/1642148337272.jpg)
 
 你會看到它顯示錯誤。是!它顯示錯誤，可是你的頁面還能正常運行，這是一項很棒，可以善用的特性。
