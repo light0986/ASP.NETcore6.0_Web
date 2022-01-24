@@ -2,17 +2,12 @@
 因為我已經連續上班好多天，快被搞到發瘋。
 
 1, 開發javascript時，請注意，記得隨時把cache刪除乾淨。
-
-2, ASP用來當登入器很好用，但用來當大量資料的操作，會跟屎一樣。
-
-3, ios line, android line, ios chrome, android chrome, windows chrome.. 
-一樣寫法，不同設備，不同瀏覽器，卻會創造出不同結果，所以記得要寫相容。
-這叫做時代一直在進步，也就是如果你不在乎使用者感受，那就別學了。
-
-4, 地端能當server 就不要異想天開用雲端當server
-
+2, ASP用來當登入器很好用，但用來當大量資料的操作，會跟屎一樣醜。
+3, iphone line, ipad line, android moblie line, android pad chrome, windows chrome.. 
+一樣寫法，不同設備，不同瀏覽器，會創造出不同結果，所以記得要寫相容。
+這叫做時代一直在進步，也就是如果你不在乎使用者感受，那就別學程式，你會陣亡。
+4, 地端能當server，就不要異想天開用雲端當server。
 5, 如果要用來賺錢的服務，SSL請花錢買，不要用免費的，那東西超麻煩，會三不五時亂碼...
-
 6, API可以很好的用來分流，但Ajax非萬能。如3
-
-7, 詳細不說了，自己看吧!
+7,TempData.peek();之後，可以當Sesstion。也就是說，開發者根本不需要設定AddSession();
+8, 詳細不說了，自己看吧!
